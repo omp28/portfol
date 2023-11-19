@@ -5,18 +5,18 @@ import Waypoints from "../dust/waypoints";
 
 export default function About() {
   let umur = sAge("Nov 16 2007");
-  let [gh, setGh] = useState('Fetching...');
+  let [gh, setGh] = useState("Fetching...");
   useEffect(() => {
-    (async() => {
+    (async () => {
       try {
         const res = await fetch("https://api.github.com/users/JastinXyz");
         const data = await res.json();
         setGh(data);
       } catch {
-        setGh({ public_repos: "several" })
+        setGh({ public_repos: "several" });
       }
-    })()
-  }, [])
+    })();
+  }, []);
 
   return (
     <>
@@ -33,7 +33,7 @@ export default function About() {
         ></path>
       </svg>
       <div className="bg-[#e3f2fd] px-6">
-        <Waypoints target={'toabout'}>
+        <Waypoints target={"toabout"}>
           <section id="about" className="text-black py-20">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="flex justify-center md:mb-0 mb-20 py-5">
@@ -64,28 +64,39 @@ export default function About() {
                   data-aos="fade-up"
                   data-aos-duration="1000"
                 ></div>
-                <p className="mt-2">
-                  {`I live in Purwokerto, Indonesia. My full name is Jastin
-                  Linggar Tama, just call me Jastin. I'm ${umur} years old. A Software
-                  Engineering student, I have known Programming since 2020 and
-                  am quite familiar with HTML, CSS, Javascript and several other
-                  languages ​​& frameworks.`}
+                <p className=" mt-4">
+                  I live in Chennai, India. My full name is Omkumar Patel. I'm
+                  19 years old. A Software Engineering student, I have known
+                  Programming since 2021 and am quite familiar with{" "}
+                  <u>
+                    {" "}
+                    <b>HTML, CSS, Javascript</b>
+                  </u>{" "}
+                  and several other languages ​​&
+                  <u>
+                    {" "}
+                    <b>frameworks</b>
+                  </u>
+                  .
                 </p>
                 <p className="mt-5">
                   A Little Story, In the past, I preferred to learn about Back
                   End but when I got to know Front End frameworks like NextJs, I
                   think now I prefer to learn about Front End. But I&apos;m also
-                  learning New Things about Back End in PHP now. I don&apos;t
-                  know, I&apos;m a person who likes to learn new things but
-                  rarely takes it seriously.
+                  learning New Things about Back End in{" "}
+                  <u>
+                    {" "}
+                    <strong>PHP</strong>{" "}
+                  </u>
+                  now.
                 </p>
                 <p className="mt-5">
                   One more thing, I have created{" "}
-                  <span className="font-bold">{gh.public_repos}</span> public
-                  repository on my Github. Various repositories such as
-                  templates or even just a package to make things easier. There
-                  are several serious projects but now they are rarely developed
-                  due to conflicts with school work.
+                  <u>
+                    <b>46</b>
+                  </u>{" "}
+                  public repository on my Github. Various repositories such as
+                  templates or even just a package to make things easier.
                 </p>
                 {/* <div class="tooltip tooltip-open tooltip-right mt-5" data-tip={`${gh.followers} Followers, ${gh.following} Following`}>
                 <button class="btn"><FaGithub className="mr-2 w-5 h-5" /> Github</button>

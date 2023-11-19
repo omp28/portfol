@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       {
         source: "/github",
-        destination: "https://github.com/JastinXyz",
+        destination: "/",
         permanent: true,
       },
       {
@@ -21,15 +21,15 @@ const nextConfig = {
       {
         source: "/instagram",
         destination: "https://instagram.com/jstn.lt",
-        permanent: true
+        permanent: true,
       },
       {
         source: "/npm",
         destination: "https://npmjs.com/~jastinlt",
-        permanent: true
-      }
+        permanent: true,
+      },
     ];
   },
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;
